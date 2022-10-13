@@ -1,2 +1,5 @@
 const read = require('./read.js');
-const jsongData = require('./data.json');
+const jsonData = require('./data.json');
+
+const getNote = Number(process.argv[2]);
+read(getNote);

@@ -1,37 +1,26 @@
-const read = require('./read.js');
-const create = require('./create.js');
-const update = require('./update.js');
+const readEntry = require('./read.js');
+const createEntry = require('./create.js');
+const updateEntry = require('./update.js');
+const deleteEntry = require('./delete.js')
 
-
-// const getNote = Number(process.argv[2]);
-// read(getNote);
-
-// node index.js ARGUMENT (read, update, create, delete)
-
-// for read, index.js read
-// for update, --> index.js update 2 'text-to-update-with'
-// for create, index.js create 'text-to-add'
-// for delete, index.js delete 2
-
-const operator = process.argv[2];
+const operator = process.argv[2]; // node index.js ARGUMENT (read, update, create, delete)
 
 switch(operator) {
-  case 'read':
-    read();
+  case 'read': // for read, index.js read
+    readEntry();
     break;
-  case 'update':
-    // console.log('update')
-    update();
+  case 'update': // for update, --> index.js update 2 'text-to-update-with'
+    updateEntry();
+    console.log('Entry successfully updated.')
     break;
-  case 'create':
-    console.log('create')
-    create();
+  case 'create': // for create, index.js create 'text-to-add'
+    console.log('Entry successfully created.')
+    createEntry();
     break;
-  case 'delete':
-    console.log('delete')
-    // deleteEntry()
+  case 'delete': // for delete, index.js delete 2
+    deleteEntry()
+    console.log('Entry successfully deleted.')
     break;
   default:
     console.log(`That operation, ${operator}, doesn\'t exist.`)
-
 }

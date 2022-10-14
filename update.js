@@ -7,10 +7,7 @@ const update = () => {
     json.notes[index] = entry;
     const newJSON = JSON.stringify(json, null, 2);
     fs.writeFile('data.json', newJSON, 'utf8', err => {
-      if (err) {
-        console.error(err);
-        process.exit(1);
-      }
+      if (err) throw err
     });
   } else {
       console.log('Sorry, that index number doesn\'t exist.')

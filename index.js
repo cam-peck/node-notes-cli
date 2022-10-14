@@ -1,5 +1,6 @@
 const read = require('./read.js');
 const create = require('./create.js');
+const update = require('./update.js');
 
 
 // const getNote = Number(process.argv[2]);
@@ -19,8 +20,8 @@ switch(operator) {
     read();
     break;
   case 'update':
-    console.log('update')
-    // update()
+    // console.log('update')
+    update();
     break;
   case 'create':
     console.log('create')

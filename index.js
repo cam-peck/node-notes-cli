@@ -1,5 +1,6 @@
 const read = require('./read.js');
-// const jsonData = require('./data.json');
+const create = require('./create.js');
+
 
 // const getNote = Number(process.argv[2]);
 // read(getNote);
@@ -23,7 +24,7 @@ switch(operator) {
     break;
   case 'create':
     console.log('create')
-    // create();
+    create();
     break;
   case 'delete':
     console.log('delete')

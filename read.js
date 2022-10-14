@@ -1,13 +1,12 @@
 const json = require('./data.json');
 
-// const getNote = json.notes[getIndex];
-// console.log(getNote);
 
-// const readFile = (index) => {
-//   const json = require('./data.json');
-//   const getNote = json.notes[index];
-//   return getNote;
-// }
-conso
+const read = function read() {
+  for (const key in json.notes) {
+    const entryNumbers = key;
+    const entryNote = json.notes[key];
+    console.log(`${entryNumbers}: ${entryNote}`)
+  }
+}
 
-module.exports = readFile;
+module.exports = read;
